@@ -2,7 +2,7 @@ abstract class Component {
   protected readonly element: Element;
 
   constructor(
-    private readonly paretElement: Element,
+    private readonly parentElement: Element,
     tagName: string,
     className: string,
   ) {
@@ -11,7 +11,7 @@ abstract class Component {
   }
 
   public render(): void {
-    this.paretElement.appendChild(this.element);
+    this.parentElement.appendChild(this.element);
 
     this.populate();
   }
